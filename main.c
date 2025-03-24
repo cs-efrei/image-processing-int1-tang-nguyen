@@ -5,6 +5,6 @@
 int main(void)
 {
     bmp8_loadImage("lena_gray.bmp");
-
+    //printf("%d",sizeof(t_header));
     return 0;
 }
