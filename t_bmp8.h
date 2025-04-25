@@ -5,6 +5,14 @@
 #ifndef T_BMP8_H
 #define T_BMP8_H
 
-
+typedef struct {
+    unsigned char header[HEADER_SIZE];
+    unsigned char colorTable[COLOR_TABLE_SIZE];
+    unsigned char * data;
+    unsigned int width;
+    unsigned int height;
+    unsigned int colorDepth;
+    unsigned int dataSize;
+} t_bmp8;
 
 #endif //T_BMP8_H
