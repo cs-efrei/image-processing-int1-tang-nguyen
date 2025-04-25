@@ -1,6 +1,7 @@
 
 /* here is the function file*/
 #include "bmp8.h"
+#include "t_bmp8.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <errno.h>

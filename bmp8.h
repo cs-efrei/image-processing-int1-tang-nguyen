@@ -8,15 +8,7 @@
 #define HEADER_SIZE 54
 #define COLOR_TABLE_SIZE 1024
 
-typedef struct {
-    unsigned char header[HEADER_SIZE];
-    unsigned char colorTable[COLOR_TABLE_SIZE];
-    unsigned char * data;
-    unsigned int width;
-    unsigned int height;
-    unsigned int colorDepth;
-    unsigned int dataSize;
-} t_bmp8;
+
 #pragma pack(2)
 typedef struct
 {
