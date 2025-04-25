@@ -6,19 +6,19 @@
 
 void print_main_menu() {
     printf("\nPlease choose an option:\n");
-    printf("1. Open an image\n");
-    printf("2. Save an image\n");
-    printf("3. Apply a filter\n");
-    printf("4. Display image information\n");
-    printf("5. Quit\n");
+    printf("   1. Open an image\n");
+    printf("   2. Save an image\n");
+    printf("   3. Apply a filter\n");
+    printf("   4. Display image information\n");
+    printf("   5. Quit\n");
 }
 
 void print_filter_menu() {
     printf("\nPlease choose a filter:\n");
-    printf("1. Negative\n");
-    printf("2. Brightness\n");
-    printf("3. Black and white (Threshold)\n");
-    printf("4. Return to the previous menu\n");
+    printf("   1. Negative\n");
+    printf("   2. Brightness\n");
+    printf("   3. Black and white (Threshold)\n");
+    printf("   4. Return to the previous menu\n");
 }
 
 int main(void)
