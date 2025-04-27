@@ -55,7 +55,7 @@ int main(void)
                 char save_name[100];
                 printf("Enter filename to save (example: result.bmp): ");
                 scanf("%s", save_name);
-                bmp8_saveImage2(save_name, image);
+                bmp8_saveImage(save_name, image);
                 printf("Image saved successfully!\n");
                 break;
             }
