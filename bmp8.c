@@ -3,7 +3,7 @@
 #include "bmp8.h"
 #include "t_bmp8.h"
 #include <stdlib.h>
-#include <stdio.h> a
+#include <stdio.h>
 
 #define OFFSET_WIDTH 18
 #define OFFSET_HEIGHT 22

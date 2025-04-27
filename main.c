@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #include "bmp8.h"
-#include "t_bmp8.h" a
+#include "t_bmp8.h"
 
 void print_main_menu() {
     printf("\nPlease choose an option:\n");

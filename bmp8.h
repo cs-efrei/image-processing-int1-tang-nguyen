@@ -5,7 +5,7 @@
 #include "t_bmp8.h"
 
 #define HEADER_SIZE 54
-#define COLOR_TABLE_SIZE 1024 a
+#define COLOR_TABLE_SIZE 1024
 
 #pragma pack(2)
 typedef struct {
