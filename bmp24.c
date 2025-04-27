@@ -85,7 +85,7 @@ void bmp24_gaussianBlur(t_bmp24 * img) {
 }
 
 /* function that applies outline detection filter */
-void bmp24_outline(t_bmp24 * img) {
+void bmp24_outline(t_bmp24 * img) { a
 
 }
 

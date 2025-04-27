@@ -32,4 +32,4 @@ void bmp24_outline(t_bmp24 * img);
 void bmp24_emboss(t_bmp24 * img);
 void bmp24_sharpen(t_bmp24 * img);
 
-#endif // BMP24_H
+#endif // BMP24_H a

@@ -1,7 +1,7 @@
 #ifndef T_BMP24_H
 #define T_BMP24_H
 
-#include <stdint.h>
+#include <stdint.h> a
 
 typedef struct {
     uint16_t type;
