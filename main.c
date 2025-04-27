@@ -21,18 +21,20 @@ void print_filter_menu() {
     printf("   4. Return to the previous menu\n");
 }
 
+/* Main function */
 int main(void)
 {
-    t_bmp8 *image = NULL;
-    int choice;
+    t_bmp8 *image = NULL; // Pointer to store the loaded image
+    int choice; // User's choice
     int running = 1;
 
+    /* Main application loop */
     while (running) {
-        print_main_menu();
-        scanf("%d", &choice);
+        print_main_menu(); // Displays main menu
+        scanf("%d", &choice); // Reads the user's choice
 
         switch (choice) {
-            case 1: {
+            case 1: { // Opens an image
                 char filename[100];
                 printf("Enter image filename (example: barbara_gray.bmp): ");
                 scanf("%s", filename);
@@ -45,7 +47,7 @@ int main(void)
                 break;
             }
 
-            case 2: {
+            case 2: { // Saves an image
                 if (image == NULL) {
                     printf("No image loaded!\n");
                     break;
@@ -58,24 +60,24 @@ int main(void)
                 break;
             }
 
-            case 3: {
+            case 3: { // Applies filter
                 if (image == NULL) {
                     printf("No image loaded!\n");
                     break;
                 }
 
                 int filter_choice;
-                print_filter_menu();
+                print_filter_menu(); // Shows filter choices
                 scanf("%d", &filter_choice);
 
                 switch (filter_choice) {
-                    case 1:
+                    case 1: // Applies negative
                         bmp8_negative(image);
                         printf("Negative filter applied.\n");
                         break;
 
                     case 2: {
-                        int value;
+                        int value; // Adjusts brightness
                         printf("Enter brightness value (-255 to 255): ");
                         scanf("%d", &value);
                         bmp8_brightness(image, value);
@@ -83,7 +85,7 @@ int main(void)
                         break;
                     }
 
-                    case 3: {
+                    case 3: { // Apply threshold
                         int threshold;
                         printf("Enter threshold value (0 to 255): ");
                         scanf("%d", &threshold);
@@ -92,7 +94,7 @@ int main(void)
                         break;
                     }
 
-                    case 4:
+                    case 4: // Return to the previous menu
                         break;
 
                     default:
@@ -102,7 +104,7 @@ int main(void)
                 break;
             }
 
-            case 4:
+            case 4: // Displays image information
                 if (image != NULL) {
                     bmp8_printInfo(image);
                 } else {
@@ -110,20 +112,21 @@ int main(void)
                 }
                 break;
 
-            case 5:
+            case 5: // Quits the application
                 running = 0;
                 break;
 
             default:
-                printf("Invalid choice. Try again.\n");
+                printf("The option doesn't exist\n");
                 break;
         }
     }
 
+    // Frees the memory before exiting
     if (image != NULL) {
         bmp8_free(image);
     }
 
-    printf("Goodbye!\n");
+    printf("Goodbye.\n");
     return 0;
 }

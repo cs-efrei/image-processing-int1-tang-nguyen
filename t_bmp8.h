@@ -1,13 +1,9 @@
-//
-// Created by minh- on 21/03/2025.
-//
-
 #ifndef T_BMP8_H
 #define T_BMP8_H
 
 typedef struct {
-    unsigned char header[HEADER_SIZE];
-    unsigned char colorTable[COLOR_TABLE_SIZE];
+    unsigned char header[54];
+    unsigned char colorTable[1024];
     unsigned char * data;
     unsigned int width;
     unsigned int height;
@@ -16,3 +12,4 @@ typedef struct {
 } t_bmp8;
 
 #endif //T_BMP8_H
+

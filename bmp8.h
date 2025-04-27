@@ -1,17 +1,14 @@
-//
-// Created by minh- on 21/03/2025.
-//
 #ifndef BMP8_H
 #define BMP8_H
+
 #include <stdint.h>
+#include "t_bmp8.h"
 
 #define HEADER_SIZE 54
 #define COLOR_TABLE_SIZE 1024
 
-
 #pragma pack(2)
-typedef struct
-{
+typedef struct {
     uint16_t signature;
     uint32_t file_size;
     uint16_t reserved_1;
@@ -28,9 +25,9 @@ typedef struct
     uint32_t vertical_resolution;
     uint32_t number_of_colors;
     uint32_t important_colors;
-}t_header;
+} t_header;
 
-
+// Functions using t_bmp8
 t_bmp8 * bmp8_loadImage(const char * filename);
 void bmp8_saveImage(const char * filename, t_bmp8 * img);
 void bmp8_saveImage2(const char * filename, t_bmp8 * img);
@@ -39,6 +36,6 @@ void bmp8_printInfo(t_bmp8 * img);
 void bmp8_negative(t_bmp8 * img);
 void bmp8_brightness(t_bmp8 * img, int value);
 void bmp8_threshold(t_bmp8 * img, int threshold);
+void bmp8_applyFilter(t_bmp8 * img, float ** kernel, int kernelSize);
 
-
-#endif //BMP8_H
+#endif // BMP8_H
